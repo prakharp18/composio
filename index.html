@@ -575,9 +575,13 @@
 import json
 import argparse
 import time
+from dotenv import load_dotenv
 from duckduckgo_search import DDGS
 import google.generativeai as genai
 from openai import OpenAI
+
+# Load environment variables from .env file
+load_dotenv()
 
 def search_app(app_name):
     """Query search engine for app API details using Composio SDK or DuckDuckGo fallback."""
@@ -597,9 +601,7 @@ def search_app(app_name):
                 user_id="research_agent"
             )
             if result and "results" in result:
-                return "\n".join([f"- {r.get('title', '')}: {r.get('content', '')} (Link: {r.get('url', '')})" for r in result["results"][:3]])
-        except Exception as e:
-     ...</code></pre>
+                return "\n".join([f"- {r.get('title', '')}: {r.get('content', '')} (Link: ...</code></pre>
                     </div>
                 </div>
                 <div style="font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 10px;">

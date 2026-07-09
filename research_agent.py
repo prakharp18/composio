@@ -2,9 +2,13 @@ import os
 import json
 import argparse
 import time
+from dotenv import load_dotenv
 from duckduckgo_search import DDGS
 import google.generativeai as genai
 from openai import OpenAI
+
+# Load environment variables from .env file
+load_dotenv()
 
 def search_app(app_name):
     """Query search engine for app API details using Composio SDK or DuckDuckGo fallback."""

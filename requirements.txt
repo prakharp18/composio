@@ -3,3 +3,4 @@ google-generativeai>=0.8.6
 openai>=2.44.0
 duckduckgo-search>=8.1.1
 pandas>=2.0.0
+python-dotenv>=1.0.0
