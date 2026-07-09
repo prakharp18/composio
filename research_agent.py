@@ -20,15 +20,16 @@ def search_app(app_name):
     if composio_api_key:
         try:
             print("Using Composio SDK for search...")
-            from composio import Composio
-            composio = Composio(api_key=composio_api_key)
-            result = composio.tools.execute(
+            from composio import ComposioToolSet
+            toolset = ComposioToolSet(api_key=composio_api_key)
+            result = toolset.execute_action(
                 action="TAVILY_SEARCH",
-                arguments={"query": query},
-                user_id="research_agent"
+                params={"query": query}
             )
+            # Check response format
             if result and "results" in result:
-                return "\n".join([f"- {r.get('title', '')}: {r.get('content', '')} (Link: {r.get('url', '')})" for r in result["results"][:3]])
+                snippets = "\n".join([f"- {r.get('title', '')}: {r.get('content', '')} (Link: {r.get('url', '')})" for r in result["results"][:3]])
+                return snippets
         except Exception as e:
             print(f"Composio SDK search failed: {e}")
             
@@ -89,7 +90,7 @@ def llm_extract(app_name, snippets, model_type="gemini"):
             return json.loads(response.choices[0].message.content)
         else:
             genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
             response = model.generate_content(prompt)
             return json.loads(response.text.strip().replace("```json", "").replace("```", ""))
     except Exception as e:
@@ -100,6 +101,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--live", action="store_true", help="Run live web research agent.")
     parser.add_argument("--openai", action="store_true", help="Use OpenAI instead of Gemini.")
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of apps to research.")
     args = parser.parse_args()
     
     with open("apps_list.json", "r") as f:
@@ -110,7 +112,8 @@ def main():
     if args.live and has_keys:
         print("Running live research agent...")
         results = []
-        for app in apps:
+        apps_to_run = apps[:args.limit] if args.limit else apps
+        for app in apps_to_run:
             snippets = search_app(app["name"])
             data = llm_extract(app["name"], snippets, "openai" if args.openai else "gemini")
             if data:
@@ -125,6 +128,7 @@ def main():
             json.dump(results, f, indent=2)
     else:
         print("Using pre-loaded verified research database (apps_data.json).")
+
 
 if __name__ == "__main__":
     main()
