@@ -135,6 +135,36 @@ def compile_html():
             }}
         }}
 
+        @media (max-width: 768px) {{
+            body {{
+                padding: 1.5rem 1rem;
+            }}
+            header {{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }}
+            .metrics {{
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }}
+            .matrix-header {{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }}
+            .table-controls {{
+                width: 100%;
+            }}
+            .search-box {{
+                width: 100%;
+            }}
+            .filter-select {{
+                width: 100%;
+            }}
+        }}
+
+
         .card {{
             background: var(--card);
             border: 1px solid var(--border);
