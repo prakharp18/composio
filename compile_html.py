@@ -8,6 +8,14 @@ def compile_html():
     with open("patterns.json", "r") as f:
         patterns_data = json.load(f)
         
+    # Calculate rates dynamically from counts
+    total_apps = patterns_data.get("total_apps", 100)
+    verdict_counts = patterns_data.get("verdict_counts", {})
+    self_serve_counts = patterns_data.get("self_serve_counts", {})
+    buildability_rate = round(verdict_counts.get("Build-ready", 0) / total_apps * 100, 1)
+    self_serve_rate = round((self_serve_counts.get("Self-serve", 0) + self_serve_counts.get("Self-serve (Trial/Sandbox)", 0)) / total_apps * 100, 1)
+
+        
     # Read the agent code to embed
     with open("research_agent.py", "r") as f:
         agent_code = f.read()
@@ -514,12 +522,12 @@ def compile_html():
                     <span class="headline-lbl">Headline Insights</span>
                     <h2 class="headline-title" style="margin-top: 4px; margin-bottom: 1rem;">Self-Serve APIs Dominate, But Enterprise Gates Remain</h2>
                     <p class="desc" style="margin-bottom: 1rem;">
-                        Our research agent evaluated 100 leading SaaS apps for developer access and API structures. The patterns reveal a clear verdict: 79% of apps can be built as agent toolkits today.
+                        Our research agent evaluated 100 leading SaaS apps for developer access and API structures. The patterns reveal a clear verdict: {buildability_rate}% of apps can be built as agent toolkits today.
                     </p>
                     <div class="bullets">
                         <div class="bullet">
                             <i class="fa-solid fa-check"></i>
-                            <span><strong>Self-Serve (79%):</strong> 79 apps offer self-serve trials/sandboxes for instant developer access.</span>
+                            <span><strong>Self-Serve ({self_serve_rate}%):</strong> {int(total_apps * self_serve_rate / 100)} apps offer self-serve trials/sandboxes for instant developer access.</span>
                         </div>
                         <div class="bullet">
                             <i class="fa-solid fa-check"></i>
@@ -533,11 +541,11 @@ def compile_html():
                 </div>
                 <div class="metrics">
                     <div class="metric">
-                        <div class="metric-val">79</div>
+                        <div class="metric-val">{int(total_apps * buildability_rate / 100)}</div>
                         <div class="metric-lbl">Build-Ready</div>
                     </div>
                     <div class="metric">
-                        <div class="metric-val">79%</div>
+                        <div class="metric-val">{self_serve_rate}%</div>
                         <div class="metric-lbl">Self-Serve</div>
                     </div>
                     <div class="metric">
@@ -545,6 +553,8 @@ def compile_html():
                         <div class="metric-lbl">Verified</div>
                     </div>
                 </div>
+
+
             </div>
 
             <!-- Clustered chart -->
