@@ -15,33 +15,34 @@ def analyze():
     # 2. Auth methods
     auth_methods = []
     for app in apps:
-        auth_methods.extend(app["auth_methods"])
+        auth_methods.extend(app.get("auth_methods") or [])
     auth_counts = dict(Counter(auth_methods))
     
     # 3. Self-serve vs Gated
-    self_serve_statuses = [app["self_serve_status"] for app in apps]
+    self_serve_statuses = [app.get("self_serve_status") or "Gated" for app in apps]
     self_serve_counts = dict(Counter(self_serve_statuses))
     
     # 4. Buildability Verdict
-    verdicts = [app["buildability_verdict"] for app in apps]
+    verdicts = [app.get("buildability_verdict") or "Blocker" for app in apps]
     verdict_counts = dict(Counter(verdicts))
     
     # 5. MCP status
-    mcp_statuses = [app["mcp_status"] for app in apps]
+    mcp_statuses = [app.get("mcp_status") or "Blocker" for app in apps]
     mcp_counts = dict(Counter(mcp_statuses))
     
     # 6. Blocker reasons
-    blockers = [app["blocker_reason"] for app in apps if app["blocker_reason"] is not None]
+    blockers = [app.get("blocker_reason") for app in apps if app.get("blocker_reason") is not None]
     blocker_counts = dict(Counter(blockers))
+
     
     # 7. Cluster analysis: categories vs self-serve vs gated
     category_gated = {}
     for app in apps:
         cat = app["category"]
-        status = app["self_serve_status"]
+        status = app.get("self_serve_status") or "Gated"
         if cat not in category_gated:
             category_gated[cat] = {"Self-serve": 0, "Gated": 0}
-        if "Self-serve" in status:
+        if "Self-serve" in str(status):
             category_gated[cat]["Self-serve"] += 1
         else:
             category_gated[cat]["Gated"] += 1

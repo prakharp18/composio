@@ -13,92 +13,100 @@
     "AI, Research and Media-native": 10
   },
   "auth_counts": {
-    "OAuth2": 50,
-    "API Key": 64,
-    "API Token": 1,
-    "Basic": 11,
-    "Token": 12,
+    "OAuth2": 44,
+    "API Key": 56,
+    "API Token": 4,
+    "Basic": 10,
+    "Token": 10,
     "JWT": 1,
+    "Other": 1,
     "OAuth1": 1,
-    "None": 3
+    "None": 4
   },
   "self_serve_counts": {
-    "Self-serve (Trial/Sandbox)": 30,
-    "Self-serve": 49,
-    "Gated (Enterprise/Contact Sales)": 10,
+    "Self-serve (Trial/Sandbox)": 27,
+    "Gated": 3,
+    "Self-serve": 46,
+    "Gated (No Public API)": 6,
+    "Gated (Enterprise/Contact Sales)": 7,
     "Gated (Paid)": 8,
-    "Gated (No Public API)": 1,
+    "Blocker": 1,
     "Gated (Invite/Beta)": 2
   },
   "verdict_counts": {
-    "Build-ready": 79,
-    "Gated-ready": 15,
-    "Blocker": 6
+    "Build-ready": 73,
+    "Blocker": 14,
+    "Gated-ready": 13
   },
   "mcp_counts": {
-    "Exists": 22,
-    "Ready": 57,
-    "Blocker": 21
+    "Exists": 18,
+    "Blocker": 27,
+    "Ready": 55
   },
   "blocker_counts": {
-    "Requires paid enterprise subscription and admin enablement.": 1,
-    "No public trial or free developer sandbox available.": 1,
+    "No search results were provided to extract the necessary API information for HubSpot.": 1,
+    "No search results provided, making it impossible to extract any details about DealCloud's API, authentication, self-serve options, or buildability for an MCP server.": 1,
+    "No search results provided, unable to extract details about Pylon's API.": 1,
     "No developer program or self-serve trials exist.": 1,
+    "No search results were provided to extract any information about the WhatsApp Business API, making it impossible to assess any details.": 1,
     "Requires a paid plan to get developer credentials.": 1,
-    "Requires enterprise-tier license and partner gate.": 1,
+    "The provided search results do not include official developer documentation or any details about Shopify's public API, its authentication methods, or how developers can access it. Consequently, specific API-related fields cannot be accurately extracted, and buildability assessment is blocked.": 1,
+    "Requires enterprise-tier license.": 1,
     "Requires a paid subscription (Business/Commerce plan).": 1,
     "Requires a paid Amazon Seller Professional subscription.": 1,
-    "No public developer API available; closed platform.": 1,
+    "No public API or developer documentation for fanbasis was found in the provided search results.": 1,
     "Requires a paid plan to activate API tokens.": 1,
-    "Requires extremely expensive Enterprise/Custom plans.": 1,
-    "Private developer program with sales gate and no sandbox.": 1,
-    "Merchant application and registration required.": 1,
-    "No public developer documentation or sandbox available.": 1,
-    "Requires high-tier corporate pricing and contract negotiation.": 1,
-    "No direct public API exists for NotebookLM.": 1,
-    "No public API developer documentation or sign up available.": 1,
-    "Requires developer form approval or enterprise package.": 1,
-    "Requires enterprise plan or API credits purchase agreement.": 1,
-    "Requires paid early access plan approval.": 1,
-    "No public developer API or documentation available.": 1,
-    "Requires custom paid enterprise plan subscription.": 1
+    "Requires Enterprise/Custom plans.": 1,
+    "Private developer program with sales gate.": 1,
+    "The provided search results are for 'BullionVault' and precious metals, not 'GitHub'. Therefore, no information about GitHub's API could be extracted.": 1,
+    "No search results were provided, so no information could be extracted for Notion.": 1,
+    "No search results were provided in the prompt to extract the required information.": 1,
+    "Merchant application required.": 1,
+    "No public developer documentation or sandbox.": 1,
+    "Requires high-tier corporate pricing.": 1,
+    "No public API information or developer documentation was found for NotebookLM in the provided search results.": 1,
+    "No public API developer documentation available.": 1,
+    "Requires developer form approval.": 1,
+    "Requires enterprise plan.": 2,
+    "Requires paid early access plan.": 1,
+    "No public developer API available.": 1
   },
   "category_gated": {
     "CRM and Sales": {
-      "Self-serve": 9,
-      "Gated": 1
+      "Self-serve": 8,
+      "Gated": 2
     },
     "Support and Helpdesk": {
       "Self-serve": 8,
       "Gated": 2
     },
     "Communications and Messaging": {
-      "Self-serve": 10,
-      "Gated": 0
+      "Self-serve": 9,
+      "Gated": 1
     },
     "Marketing, Ads, Email and Social": {
       "Self-serve": 9,
       "Gated": 1
     },
     "Ecommerce": {
-      "Self-serve": 6,
-      "Gated": 4
+      "Self-serve": 5,
+      "Gated": 5
     },
     "Data, SEO and Scraping": {
       "Self-serve": 7,
       "Gated": 3
     },
     "Developer, Infra and Data platforms": {
-      "Self-serve": 10,
-      "Gated": 0
+      "Self-serve": 9,
+      "Gated": 1
     },
     "Productivity and Project Management": {
-      "Self-serve": 10,
-      "Gated": 0
+      "Self-serve": 9,
+      "Gated": 1
     },
     "Finance and Fintech": {
-      "Self-serve": 7,
-      "Gated": 3
+      "Self-serve": 6,
+      "Gated": 4
     },
     "AI, Research and Media-native": {
       "Self-serve": 3,
@@ -111,205 +119,185 @@
         "id": 2,
         "name": "HubSpot",
         "category": "CRM and Sales",
+        "one_line_desc": null,
+        "auth_methods": [],
+        "self_serve_status": null,
+        "self_serve_desc": null,
+        "api_surface": null,
+        "api_surface_desc": null,
+        "mcp_status": null,
+        "mcp_desc": null,
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "No search results were provided to extract the necessary API information for HubSpot.",
+        "evidence_url": null,
         "pass1_accuracy": "Incorrect",
-        "pass2_corrected": true,
-        "one_line_desc": "Inbound marketing, sales, and service software.",
-        "auth_methods": [
-          "OAuth2"
-        ],
-        "self_serve_status": "Self-serve (Trial/Sandbox)",
-        "self_serve_desc": "Can sign up for a free Developer Account and create test developer portals.",
-        "api_surface": "REST",
-        "api_surface_desc": "Broad REST API covering Contacts, Deals, Pipelines, Webhooks, and custom objects.",
-        "mcp_status": "Exists",
-        "mcp_desc": "Official and community MCP servers exist for HubSpot.",
-        "buildability_verdict": "Build-ready",
-        "blocker_reason": null,
-        "evidence_url": "https://developers.hubspot.com/docs/api/overview"
+        "pass2_corrected": true
       },
       {
         "id": 10,
         "name": "DealCloud",
         "category": "CRM and Sales",
-        "pass1_accuracy": "Correct",
-        "pass2_corrected": false,
-        "one_line_desc": "Specialized CRM for financial firms, private equity, and investment banking.",
-        "auth_methods": [
-          "OAuth2"
-        ],
-        "self_serve_status": "Gated (Enterprise/Contact Sales)",
-        "self_serve_desc": "No self-serve sign up. Credentials are only provided to existing enterprise customers.",
-        "api_surface": "REST",
-        "api_surface_desc": "REST API for querying private database models and reporting.",
+        "one_line_desc": "Information unavailable: No search results provided.",
+        "auth_methods": [],
+        "self_serve_status": "Gated (No Public API)",
+        "self_serve_desc": "Information unavailable: No search results provided to determine how a developer gets credentials. Assumed gated due to lack of public documentation.",
+        "api_surface": "None",
+        "api_surface_desc": "Information unavailable: No search results provided to describe the API surface. Assumed no public API.",
         "mcp_status": "Blocker",
-        "mcp_desc": "Blocked by strict enterprise gates and private hosting configurations.",
-        "buildability_verdict": "Gated-ready",
-        "blocker_reason": "Requires paid enterprise subscription and admin enablement.",
-        "evidence_url": "https://api.docs.dealcloud.com/"
+        "mcp_desc": "Information unavailable: Cannot determine if an official/community MCP server exists or can be built easily without search results.",
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "No search results provided, making it impossible to extract any details about DealCloud's API, authentication, self-serve options, or buildability for an MCP server.",
+        "evidence_url": "N/A (No search results provided to find an official developer documentation link.)",
+        "pass1_accuracy": "Correct",
+        "pass2_corrected": false
       },
       {
         "id": 15,
         "name": "Pylon",
         "category": "Support and Helpdesk",
+        "one_line_desc": null,
+        "auth_methods": [],
+        "self_serve_status": null,
+        "self_serve_desc": null,
+        "api_surface": null,
+        "api_surface_desc": null,
+        "mcp_status": null,
+        "mcp_desc": null,
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "No search results provided, unable to extract details about Pylon's API.",
+        "evidence_url": null,
         "pass1_accuracy": "Correct",
-        "pass2_corrected": false,
-        "one_line_desc": "Customer support platform designed for Slack/Teams-first customer operations.",
-        "auth_methods": [
-          "API Key"
-        ],
-        "self_serve_status": "Gated (Enterprise/Contact Sales)",
-        "self_serve_desc": "Must book a demo/talk to sales to get access. No public signup/trial.",
-        "api_surface": "REST",
-        "api_surface_desc": "REST API for linking Slack conversations to support queues.",
-        "mcp_status": "Blocker",
-        "mcp_desc": "Lack of developer sandbox makes sandbox testing impossible.",
-        "buildability_verdict": "Gated-ready",
-        "blocker_reason": "No public trial or free developer sandbox available.",
-        "evidence_url": "https://docs.usepylon.com/"
+        "pass2_corrected": false
       },
       {
         "id": 28,
         "name": "WhatsApp Business",
         "category": "Communications and Messaging",
+        "one_line_desc": "",
+        "auth_methods": [],
+        "self_serve_status": "Gated (No Public API)",
+        "self_serve_desc": "",
+        "api_surface": "None",
+        "api_surface_desc": "",
+        "mcp_status": "Blocker",
+        "mcp_desc": "",
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "No search results were provided to extract any information about the WhatsApp Business API, making it impossible to assess any details.",
+        "evidence_url": "",
         "pass1_accuracy": "Incorrect",
-        "pass2_corrected": true,
-        "one_line_desc": "API for large businesses to communicate with customers on WhatsApp.",
-        "auth_methods": [
-          "Token"
-        ],
-        "self_serve_status": "Self-serve",
-        "self_serve_desc": "Sign up on Meta for Developers portal, register a test number and get free tokens.",
-        "api_surface": "REST",
-        "api_surface_desc": "Graph API REST endpoints for sending templates, media, and text messages.",
-        "mcp_status": "Ready",
-        "mcp_desc": "Standardized Meta Graph API endpoints.",
-        "buildability_verdict": "Build-ready",
-        "blocker_reason": null,
-        "evidence_url": "https://developers.facebook.com/docs/whatsapp"
+        "pass2_corrected": true
       },
       {
         "id": 41,
         "name": "Shopify",
         "category": "Ecommerce",
-        "pass1_accuracy": "Incorrect",
-        "pass2_corrected": true,
-        "one_line_desc": "Leading ecommerce platform for online stores.",
+        "one_line_desc": "Shopify is an all-in-one commerce platform that enables businesses to sell products online and in person, offering tools to manage various aspects of their operations.",
         "auth_methods": [
-          "OAuth2"
+          "Other"
         ],
-        "self_serve_status": "Self-serve (Trial/Sandbox)",
-        "self_serve_desc": "Create a free Shopify Partner account to set up developer sandbox stores.",
-        "api_surface": "REST & GraphQL",
-        "api_surface_desc": "Very broad APIs. GraphQL is the primary interface for admin and storefront.",
-        "mcp_status": "Exists",
-        "mcp_desc": "Community MCP servers exist for Shopify.",
-        "buildability_verdict": "Build-ready",
-        "blocker_reason": null,
-        "evidence_url": "https://shopify.dev/docs/api"
+        "self_serve_status": "Gated (No Public API)",
+        "self_serve_desc": "No public API developer portal or self-serve access path for obtaining credentials could be identified from the provided search results.",
+        "api_surface": "None",
+        "api_surface_desc": "No details regarding an API surface (e.g., REST, GraphQL, CLI, SOAP) were found in the provided search results.",
+        "mcp_status": "Blocker",
+        "mcp_desc": "Cannot determine if an official/community Model Context Protocol (MCP) server exists or can be easily built, as no API documentation or details were provided in the search results.",
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "The provided search results do not include official developer documentation or any details about Shopify's public API, its authentication methods, or how developers can access it. Consequently, specific API-related fields cannot be accurately extracted, and buildability assessment is blocked.",
+        "evidence_url": "https://www.shopify.com/",
+        "pass1_accuracy": "Incorrect",
+        "pass2_corrected": true
       },
       {
         "id": 50,
         "name": "fanbasis",
         "category": "Ecommerce",
-        "pass1_accuracy": "Correct",
-        "pass2_corrected": false,
-        "one_line_desc": "Monetization and digital marketplace platform for creators.",
-        "auth_methods": [
-          "API Key"
-        ],
-        "self_serve_status": "Gated (Enterprise/Contact Sales)",
-        "self_serve_desc": "Private beta. No public documentation or API access.",
+        "one_line_desc": "Information not found in the provided search results.",
+        "auth_methods": [],
+        "self_serve_status": "Gated (No Public API)",
+        "self_serve_desc": "No public API or developer documentation for fanbasis was found in the provided search results.",
         "api_surface": "None",
-        "api_surface_desc": "No public API surface exists today.",
+        "api_surface_desc": "No public API documentation for fanbasis was found in the provided search results.",
         "mcp_status": "Blocker",
-        "mcp_desc": "No API is available.",
+        "mcp_desc": "No public API documentation for fanbasis was found in the provided search results, which is required to build an MCP.",
         "buildability_verdict": "Blocker",
-        "blocker_reason": "No public developer API available; closed platform.",
-        "evidence_url": "https://fanbasis.com/"
+        "blocker_reason": "No public API or developer documentation for fanbasis was found in the provided search results.",
+        "evidence_url": null,
+        "pass1_accuracy": "Correct",
+        "pass2_corrected": false
       },
       {
         "id": 61,
         "name": "GitHub",
         "category": "Developer, Infra and Data platforms",
+        "one_line_desc": "Information about GitHub's API is not available in the provided search results.",
+        "auth_methods": [],
+        "self_serve_status": "Gated (No Public API)",
+        "self_serve_desc": "No relevant information found in the provided search results.",
+        "api_surface": "None",
+        "api_surface_desc": "No relevant information found in the provided search results.",
+        "mcp_status": "Blocker",
+        "mcp_desc": "No information about GitHub's API or MCP status can be determined from the provided search results.",
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "The provided search results are for 'BullionVault' and precious metals, not 'GitHub'. Therefore, no information about GitHub's API could be extracted.",
+        "evidence_url": null,
         "pass1_accuracy": "Correct",
-        "pass2_corrected": false,
-        "one_line_desc": "Git repository hosting and developer collaboration platform.",
-        "auth_methods": [
-          "OAuth2",
-          "API Key"
-        ],
-        "self_serve_status": "Self-serve",
-        "self_serve_desc": "Sign up for free and generate Personal Access Tokens or register GitHub Apps.",
-        "api_surface": "REST & GraphQL",
-        "api_surface_desc": "Extremely broad APIs mapping all GitHub features.",
-        "mcp_status": "Exists",
-        "mcp_desc": "Official and community GitHub MCP servers exist.",
-        "buildability_verdict": "Build-ready",
-        "blocker_reason": null,
-        "evidence_url": "https://docs.github.com/rest"
+        "pass2_corrected": false
       },
       {
         "id": 71,
         "name": "Notion",
         "category": "Productivity and Project Management",
+        "one_line_desc": null,
+        "auth_methods": [],
+        "self_serve_status": null,
+        "self_serve_desc": null,
+        "api_surface": null,
+        "api_surface_desc": null,
+        "mcp_status": null,
+        "mcp_desc": null,
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "No search results were provided, so no information could be extracted for Notion.",
+        "evidence_url": null,
         "pass1_accuracy": "Correct",
-        "pass2_corrected": false,
-        "one_line_desc": "Connected workspace for notes, docs, and databases.",
-        "auth_methods": [
-          "OAuth2",
-          "Token"
-        ],
-        "self_serve_status": "Self-serve",
-        "self_serve_desc": "Create a free workspace, then create internal integrations under Developers portal.",
-        "api_surface": "REST",
-        "api_surface_desc": "REST API mapping Blocks, Pages, Databases, and Users.",
-        "mcp_status": "Exists",
-        "mcp_desc": "Official and community Notion MCP servers are available.",
-        "buildability_verdict": "Build-ready",
-        "blocker_reason": null,
-        "evidence_url": "https://developers.notion.com/"
+        "pass2_corrected": false
       },
       {
         "id": 82,
         "name": "Plaid",
         "category": "Finance and Fintech",
+        "one_line_desc": "No search results were provided to extract a description of what the app does.",
+        "auth_methods": [],
+        "self_serve_status": "Blocker",
+        "self_serve_desc": "No search results were provided to explain how a developer gets credentials.",
+        "api_surface": "None",
+        "api_surface_desc": "No search results were provided to describe the depth of the API.",
+        "mcp_status": "Blocker",
+        "mcp_desc": "No search results were provided to determine the MCP status.",
+        "buildability_verdict": "Blocker",
+        "blocker_reason": "No search results were provided in the prompt to extract the required information.",
+        "evidence_url": null,
         "pass1_accuracy": "Incorrect",
-        "pass2_corrected": true,
-        "one_line_desc": "API interface linking bank accounts with financial apps.",
-        "auth_methods": [
-          "API Key",
-          "Basic"
-        ],
-        "self_serve_status": "Self-serve (Trial/Sandbox)",
-        "self_serve_desc": "Sign up for a free developer account to get instant API keys for sandbox testing.",
-        "api_surface": "REST",
-        "api_surface_desc": "REST API for linking items, accounts, balances, transactions, and identity.",
-        "mcp_status": "Ready",
-        "mcp_desc": "Broad API but sandbox is open and well-documented.",
-        "buildability_verdict": "Build-ready",
-        "blocker_reason": null,
-        "evidence_url": "https://plaid.com/docs/"
+        "pass2_corrected": true
       },
       {
         "id": 91,
         "name": "NotebookLM",
         "category": "AI, Research and Media-native",
-        "pass1_accuracy": "Incorrect",
-        "pass2_corrected": true,
-        "one_line_desc": "Personal AI research assistant by Google.",
+        "one_line_desc": "No information available based on the provided search results.",
         "auth_methods": [
-          "OAuth2",
-          "API Key"
+          "None"
         ],
         "self_serve_status": "Gated (No Public API)",
-        "self_serve_desc": "NotebookLM has no direct API. The underlying Gemini API can be used instead.",
+        "self_serve_desc": "No public API documentation or self-serve path was found in the provided search results.",
         "api_surface": "None",
-        "api_surface_desc": "No public API surface exists for NotebookLM.",
+        "api_surface_desc": "No public API surface information was found.",
         "mcp_status": "Blocker",
-        "mcp_desc": "NotebookLM product lacks developer endpoints.",
+        "mcp_desc": "No public API exists to build an MCP server for NotebookLM.",
         "buildability_verdict": "Blocker",
-        "blocker_reason": "No direct public API exists for NotebookLM.",
-        "evidence_url": "https://cloud.google.com/gemini"
+        "blocker_reason": "No public API information or developer documentation was found for NotebookLM in the provided search results.",
+        "evidence_url": null,
+        "pass1_accuracy": "Incorrect",
+        "pass2_corrected": true
       }
     ],
     "pass1_accuracy": 50.0,

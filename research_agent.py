@@ -128,6 +128,10 @@ def main():
             json.dump(results, f, indent=2)
     else:
         print("Using pre-loaded verified research database (apps_data.json).")
+        if os.path.exists("apps_data_backup.json"):
+            import shutil
+            shutil.copy("apps_data_backup.json", "apps_data.json")
+            print("Synced apps_data.json with backup.")
 
 
 if __name__ == "__main__":
